@@ -1,9 +1,9 @@
 version: "3"
-
 services:
   app:
     build:
       context: .
+
     ports:
       - "8000:8000"
     volumes:
@@ -16,7 +16,7 @@ services:
       - DB_HOST=db
       - DB_NAME=app
       - DB_USER=postgres
-      - DB_PASS=pass1234
+      - DB_PASS=pass#123
     depends_on:
       - db
 
@@ -25,4 +25,4 @@ services:
     environment:
       - POSTGRES_DB=app
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=pass1234
+      - POSTGRES_PASSWORD=pass#123
